@@ -8,86 +8,199 @@
 
     <title>Add Patient</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css">
 
 </head>
 
 <body>
 
-<div class="form-container">
+<div class="app-shell">
 
-    <div class="page-header">
+    <!-- ================= Sidebar ================= -->
 
-        <h1>
-            <img src="/images/hospital-logo.png" alt="Hospital Logo" class="header-logo">
-            Hospital Management System
-        </h1>
-        <p>Add New Patient</p>
+    <aside class="sidebar">
 
-    </div>
+        <div class="sidebar-brand">
 
-    <div class="form-card">
+            <img src="/images/hospital-logo.png" alt="Hospital Logo">
 
-        <div class="form-grid">
-
-            <div class="input-group">
-                <label>First Name</label>
-                <input type="text" id="firstName" placeholder="Enter first name">
-            </div>
-
-            <div class="input-group">
-                <label>Last Name</label>
-                <input type="text" id="lastName" placeholder="Enter last name">
-            </div>
-
-            <div class="input-group">
-                <label>Age</label>
-                <input type="number" id="age" placeholder="Enter age">
-            </div>
-
-            <div class="input-group">
-                <label>Gender</label>
-                <input type="text" id="gender" placeholder="Male / Female">
-            </div>
-
-            <div class="input-group">
-                <label>Phone</label>
-                <input type="text" id="phone" placeholder="9876543210">
-            </div>
-
-            <div class="input-group">
-                <label>Email</label>
-                <input type="email" id="email" placeholder="example@email.com">
-            </div>
-
-            <div class="input-group full-width">
-                <label>Address</label>
-                <input type="text" id="address" placeholder="Enter address">
+            <div class="sidebar-brand-text">
+                <div class="sidebar-brand-name">Hospital</div>
+                <div class="sidebar-brand-sub">Management</div>
             </div>
 
         </div>
 
-        <div class="form-buttons">
+        <div class="pulse-rule on-dark"></div>
 
-            <button onclick="addPatient()">
-                Save Patient
-            </button>
+        <nav class="sidebar-nav">
 
-            <button class="secondary-btn"
-                    onclick="window.location.href='patients.html'">
-                Back
+            <a href="dashboard.html" class="nav-link">
+                <span class="nav-icon">🏠</span>
+                Dashboard
+            </a>
+
+            <a href="patients.html" class="nav-link active">
+                <span class="nav-icon">👨‍⚕️</span>
+                Patients
+            </a>
+
+            <a href="doctor.html" class="nav-link">
+                <span class="nav-icon">🩺</span>
+                Doctors
+            </a>
+
+            <a href="appointment.html" class="nav-link">
+                <span class="nav-icon">📅</span>
+                Appointments
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <button class="logout-btn" onclick="logout()">
+                Logout
             </button>
 
         </div>
 
-        <p id="message" class="message"></p>
+    </aside>
 
-    </div>
+    <!-- ================= Main Content ================= -->
+
+    <main class="main-content">
+
+        <div class="main-inner">
+
+            <div class="form-container">
+
+                <!-- Page Header -->
+
+                <div class="page-header">
+
+                    <span class="eyebrow">
+                        Patients
+                    </span>
+
+                    <h1>Add New Patient</h1>
+
+                    <p>
+                        Register a new patient in the Hospital Management System.
+                    </p>
+
+                </div>
+
+                <div class="pulse-rule"></div>
+
+                <!-- Form Card -->
+
+                <div class="form-card">
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+                            <label for="firstName">First Name</label>
+                            <input
+                                    type="text"
+                                    id="firstName"
+                                    placeholder="Enter first name"
+                                    required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="lastName">Last Name</label>
+                            <input
+                                    type="text"
+                                    id="lastName"
+                                    placeholder="Enter last name"
+                                    required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="age">Age</label>
+                            <input
+                                    type="number"
+                                    id="age"
+                                    placeholder="Enter age"
+                                    required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="gender">Gender</label>
+
+                            <select id="gender">
+
+                                <option value="">Select Gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="input-group">
+                            <label for="phone">Phone Number</label>
+                            <input
+                                    type="text"
+                                    id="phone"
+                                    placeholder="9876543210">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email">Email Address</label>
+                            <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="example@email.com">
+                        </div>
+
+                        <div class="input-group full-width">
+                            <label for="address">Address</label>
+                            <input
+                                    type="text"
+                                    id="address"
+                                    placeholder="Enter full address">
+                        </div>
+
+                    </div>
+
+                    <!-- Buttons -->
+
+                    <div class="form-buttons">
+
+                        <button onclick="addPatient()">
+                            Save Patient
+                        </button>
+
+                        <button
+                                class="secondary-btn"
+                                onclick="window.location.href='patients.html'">
+
+                            Cancel
+
+                        </button>
+
+                    </div>
+
+                    <p id="message" class="message"></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
 
 </div>
 
+<!-- JavaScript -->
 <script src="/js/app.js"></script>
 
 </body>

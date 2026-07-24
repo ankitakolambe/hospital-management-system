@@ -1,59 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appointments</title>
 
+    <title>Appointment Management</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css">
+
 </head>
 
 <body>
 
-<div class="login-container" style="width:95%; max-width:1200px;">
+<div class="app-shell">
 
-    <h1>
-        <img src="/images/hospital-logo.png" alt="Hospital Logo" class="header-logo">
-        Hospital Management System
-    </h1>
-    <h2>Appointment List</h2>
+    <!-- ================= Sidebar ================= -->
 
-    <button onclick="window.location.href='add-appointment.html'">
-        Add Appointment
-    </button>
+    <aside class="sidebar">
 
-    <br><br>
+        <div class="sidebar-brand">
 
-    <table id="appointmentTable" border="1" width="100%">
+            <img src="/images/hospital-logo.png" alt="Hospital Logo">
 
-        <thead>
+            <div class="sidebar-brand-text">
+                <div class="sidebar-brand-name">Hospital</div>
+                <div class="sidebar-brand-sub">Management</div>
+            </div>
 
-        <tr>
-            <th>ID</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Status</th>
-            <th>Patient ID</th>
-            <th>Doctor ID</th>
-            <th>Action</th>
-        </tr>
+        </div>
 
-        </thead>
+        <div class="pulse-rule on-dark"></div>
 
-        <tbody>
+        <nav class="sidebar-nav">
 
-        </tbody>
+            <a href="dashboard.html" class="nav-link">
+                <span class="nav-icon">🏠</span>
+                Dashboard
+            </a>
 
-    </table>
+            <a href="patients.html" class="nav-link">
+                <span class="nav-icon">👨‍⚕️</span>
+                Patients
+            </a>
 
-    <br>
+            <a href="doctor.html" class="nav-link">
+                <span class="nav-icon">🩺</span>
+                Doctors
+            </a>
 
-    <button onclick="window.location.href='dashboard.html'">
-        Back
-    </button>
+            <a href="appointment.html" class="nav-link active">
+                <span class="nav-icon">📅</span>
+                Appointments
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <button class="logout-btn" onclick="logout()">
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+    <!-- ================= Main Content ================= -->
+
+    <main class="main-content">
+
+        <div class="main-inner">
+
+            <div class="table-container">
+
+                <!-- Page Header -->
+
+                <div class="page-header">
+
+                    <span class="eyebrow">
+                        Appointments
+                    </span>
+
+                    <h1>Appointment Management</h1>
+
+                    <p>
+                        Schedule, update and manage patient appointments.
+                    </p>
+
+                </div>
+
+                <div class="pulse-rule"></div>
+
+                <!-- Table Card -->
+
+                <div class="table-card">
+
+                    <div class="table-top">
+
+                        <h2>Appointment List</h2>
+
+                        <button onclick="window.location.href='add-appointment.html'">
+                            + Add Appointment
+                        </button>
+
+                    </div>
+
+                    <table id="appointmentTable">
+
+                        <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                            <th>Patient ID</th>
+                            <th>Doctor ID</th>
+                            <th>Actions</th>
+                        </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                        <!-- Loaded dynamically -->
+
+                        </tbody>
+
+                    </table>
+
+                    <div class="table-footer">
+
+                        <button
+                                class="secondary-btn"
+                                onclick="window.location.href='dashboard.html'">
+
+                            ← Back to Dashboard
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
 
 </div>
 
+<!-- JavaScript -->
 <script src="/js/app.js"></script>
 
 <script>
@@ -61,4 +165,5 @@
 </script>
 
 </body>
+
 </html>

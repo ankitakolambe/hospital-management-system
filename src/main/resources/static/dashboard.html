@@ -12,113 +12,152 @@
 
 </head>
 
-<body class="dashboard-page">
+<body>
 
-<div class="dashboard-container">
+<div class="app-shell">
 
-    <!-- Header -->
+    <aside class="sidebar">
 
-    <div class="dashboard-header">
+        <div class="sidebar-brand">
+            <img src="images/hospital-logo.png" alt="Logo">
 
-        <img
-                src="images/hospital-logo.png"
-                alt="Hospital Logo"
-                class="dashboard-logo">
+            <div class="sidebar-brand-text">
+                <div class="sidebar-brand-name">Hospital</div>
+                <div class="sidebar-brand-sub">Management</div>
+            </div>
+        </div>
 
-        <h1>Hospital Management System</h1>
+        <div class="pulse-rule on-dark"></div>
 
-        <p>Welcome back, Administrator 👋</p>
+        <nav class="sidebar-nav">
 
-    </div>
+            <a href="dashboard.html" class="nav-link active">
+                <span class="nav-icon">🏠</span>
+                Dashboard
+            </a>
 
-    <!-- Dashboard Cards -->
+            <a href="patients.html" class="nav-link">
+                <span class="nav-icon">👨‍⚕️</span>
+                Patients
+            </a>
 
-    <div class="dashboard-cards">
+            <a href="doctor.html" class="nav-link">
+                <span class="nav-icon">🩺</span>
+                Doctors
+            </a>
 
-        <!-- Patients -->
+            <a href="appointment.html" class="nav-link">
+                <span class="nav-icon">📅</span>
+                Appointments
+            </a>
 
-        <div class="dashboard-card">
+        </nav>
 
-            <div class="card-icon">👨‍⚕️</div>
-
-            <h3>Patients</h3>
-
-            <p>
-                Add, edit, delete and manage patient records.
-            </p>
-
-            <button onclick="window.location.href='patients.html'">
-                Manage Patients
+        <div class="sidebar-footer">
+            <button class="logout-btn" onclick="logout()">
+                Logout
             </button>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <div class="main-inner">
+
+            <div class="dashboard-container">
+
+                <div class="dashboard-header">
+
+                    <span class="eyebrow">
+                        Dashboard
+                    </span>
+
+                    <h1>Hospital Management System</h1>
+
+                    <p>Welcome back, Administrator 👋</p>
+
+                </div>
+
+                <div class="pulse-rule"></div>
+
+                <div class="dashboard-cards">
+
+                    <!-- Patients -->
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon">👨‍⚕️</div>
+
+                        <h3>Patients</h3>
+
+                        <p>Manage all patient records.</p>
+
+                        <button onclick="location.href='patients.html'">
+                            Manage Patients
+                        </button>
+
+                    </div>
+
+                    <!-- Doctors -->
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon">🩺</div>
+
+                        <h3>Doctors</h3>
+
+                        <p>Manage doctor information.</p>
+
+                        <button onclick="location.href='doctor.html'">
+                            Manage Doctors
+                        </button>
+
+                    </div>
+
+                    <!-- Appointments -->
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon">📅</div>
+
+                        <h3>Appointments</h3>
+
+                        <p>Manage appointments.</p>
+
+                        <button onclick="location.href='appointment.html'">
+                            Manage Appointments
+                        </button>
+
+                    </div>
+
+                    <!-- Add Patient -->
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon">➕</div>
+
+                        <h3>Add Patient</h3>
+
+                        <p>Register a new patient.</p>
+
+                        <button onclick="location.href='add-patient.html'">
+                            Add Patient
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-        <!-- Doctors -->
-
-        <div class="dashboard-card">
-
-            <div class="card-icon">🩺</div>
-
-            <h3>Doctors</h3>
-
-            <p>
-                Manage doctor information and specializations.
-            </p>
-
-            <button onclick="window.location.href='doctor.html'">
-                Manage Doctors
-            </button>
-
-        </div>
-
-        <!-- Appointments -->
-
-        <div class="dashboard-card">
-
-            <div class="card-icon">📅</div>
-
-            <h3>Appointments</h3>
-
-            <p>
-                Book, update and manage appointments.
-            </p>
-
-            <button onclick="window.location.href='appointment.html'">
-                Manage Appointments
-            </button>
-
-        </div>
-
-        <!-- Add Patient -->
-
-        <div class="dashboard-card">
-
-            <div class="card-icon">➕</div>
-
-            <h3>Add Patient</h3>
-
-            <p>
-                Register a new patient in the system.
-            </p>
-
-            <button onclick="window.location.href='add-patient.html'">
-                Add Patient
-            </button>
-
-        </div>
-
-    </div>
-
-    <!-- Logout -->
-
-    <button class="logout-btn" onclick="logout()">
-        Logout
-    </button>
+    </main>
 
 </div>
 
 <script src="js/app.js"></script>
 
 </body>
-
 </html>

@@ -138,6 +138,10 @@ async function loadPatients() {
 
         </tr>
 
+
+
+
+
         `;
 
 
