@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="login-container" style="width:90%; max-width:1100px;">
+
+    <h1>
+        <img src="/images/hospital-logo.png" alt="Hospital Logo" class="header-logo">
+        Hospital Management System
+    </h1>
+    <h2>Doctor List</h2>
+    <button onclick="window.location.href='add-doctor.html'">
+        Add Doctor
+    </button>
+
+    <br><br>
+
+    <table border="1" width="100%" id="doctorTable">
+
+        <thead>
+
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last name</th>
+            <th>Specialization</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Experience</th>
+            <th>Action</th>
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+    </table>
+
+    <br>
+
+    <button onclick="window.location.href='dashboard.html'">
+        Back
+    </button>
+
+</div>
+
+<script src="/js/app.js"></script>
+
+<script>
+    loadDoctors();
+</script>
+
+</body>
+</html>

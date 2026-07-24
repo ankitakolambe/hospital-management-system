@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hospital Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="dashboard-page">
+
+<div class="dashboard-container">
+
+    <!-- Header -->
+
+    <div class="dashboard-header">
+
+        <img
+                src="images/hospital-logo.png"
+                alt="Hospital Logo"
+                class="dashboard-logo">
+
+        <h1>Hospital Management System</h1>
+
+        <p>Welcome back, Administrator 👋</p>
+
+    </div>
+
+    <!-- Dashboard Cards -->
+
+    <div class="dashboard-cards">
+
+        <!-- Patients -->
+
+        <div class="dashboard-card">
+
+            <div class="card-icon">👨‍⚕️</div>
+
+            <h3>Patients</h3>
+
+            <p>
+                Add, edit, delete and manage patient records.
+            </p>
+
+            <button onclick="window.location.href='patients.html'">
+                Manage Patients
+            </button>
+
+        </div>
+
+        <!-- Doctors -->
+
+        <div class="dashboard-card">
+
+            <div class="card-icon">🩺</div>
+
+            <h3>Doctors</h3>
+
+            <p>
+                Manage doctor information and specializations.
+            </p>
+
+            <button onclick="window.location.href='doctor.html'">
+                Manage Doctors
+            </button>
+
+        </div>
+
+        <!-- Appointments -->
+
+        <div class="dashboard-card">
+
+            <div class="card-icon">📅</div>
+
+            <h3>Appointments</h3>
+
+            <p>
+                Book, update and manage appointments.
+            </p>
+
+            <button onclick="window.location.href='appointment.html'">
+                Manage Appointments
+            </button>
+
+        </div>
+
+        <!-- Add Patient -->
+
+        <div class="dashboard-card">
+
+            <div class="card-icon">➕</div>
+
+            <h3>Add Patient</h3>
+
+            <p>
+                Register a new patient in the system.
+            </p>
+
+            <button onclick="window.location.href='add-patient.html'">
+                Add Patient
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Logout -->
+
+    <button class="logout-btn" onclick="logout()">
+        Logout
+    </button>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
